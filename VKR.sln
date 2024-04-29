@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VKR", "VKR\VKR.csproj", "{119B6307-54C2-4BBB-B41E-E3907A52F3DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C4848147-2A19-4855-8315-572BE6D1459E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VKRCons", "VKRCons\VKRCons.csproj", "{46B90828-D86E-4E61-9379-183EE0BEBFEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{119B6307-54C2-4BBB-B41E-E3907A52F3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{119B6307-54C2-4BBB-B41E-E3907A52F3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{119B6307-54C2-4BBB-B41E-E3907A52F3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B90828-D86E-4E61-9379-183EE0BEBFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B90828-D86E-4E61-9379-183EE0BEBFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B90828-D86E-4E61-9379-183EE0BEBFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B90828-D86E-4E61-9379-183EE0BEBFEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{46B90828-D86E-4E61-9379-183EE0BEBFEB} = {C4848147-2A19-4855-8315-572BE6D1459E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {633E9CE9-1E76-430B-8B77-9A8809677613}
