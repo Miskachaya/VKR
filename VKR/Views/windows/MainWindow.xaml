@@ -3,10 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:VKR.ViewModels"
         xmlns:local="clr-namespace:VKR"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{ Binding Title}"
+        Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Выход"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="График"></MenuItem>
+            </Menu>
+            <TabControl DockPanel.Dock="Bottom">
+                <TabItem></TabItem>
+                <TabItem></TabItem>
+            </TabControl>
+        </DockPanel>
     </Grid>
 </Window>
