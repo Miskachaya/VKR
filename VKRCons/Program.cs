@@ -10,6 +10,8 @@ namespace VKRCons
     {
         static void Main(string[] args)
         {
+            var cmd = new RelayCommand(o => { Console.WriteLine("Команда" + o.ToString()); });
+            cmd.Execute("1");
         }
     }
 }

@@ -20,8 +20,73 @@
                 <MenuItem Header="График"></MenuItem>
             </Menu>
             <TabControl DockPanel.Dock="Bottom">
-                <TabItem></TabItem>
-                <TabItem></TabItem>
+                <TabItem>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <DockPanel Grid.Column="1" Background="Brown">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Background="Black">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
+                                <Grid Grid.Row="1" Background="Bisque"></Grid>
+                                <Grid Grid.Row="2" Background="DarkSlateGray"></Grid>
+                                <Grid Grid.Row="3" Background="Beige"></Grid>
+                                <Grid Grid.Row="4" Background="Aqua"></Grid>
+                                <Grid Grid.Row="5" Background="Azure"></Grid>
+                                <Grid Grid.Row="6" Background="Aquamarine"></Grid>
+                                <Grid Grid.Row="7" Background="AntiqueWhite"></Grid>
+                                <Grid Grid.Row="8" Background="DarkCyan"></Grid>
+                                <Grid Grid.Row="9" Background="AliceBlue"></Grid>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Column="0" Background="Honeydew">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition ></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0" Background="AliceBlue"></Grid>
+                                <Grid Grid.Row="1" Background="Azure"></Grid>
+                                <Grid Grid.Row="2" Background="AntiqueWhite"></Grid>
+                                <Grid Grid.Row="3" Background="Aqua"></Grid>
+                                <Grid Grid.Row="4" Background="Aquamarine"></Grid>
+                                <Grid Grid.Row="5" Background="Azure"></Grid>
+                                <Grid Grid.Row="6" Background="Beige"></Grid>
+                                <Grid Grid.Row="7" Background="Bisque"></Grid>
+                                <Grid Grid.Row="8" Background="Bisque"></Grid>
+                                <Grid Grid.Row="9" Background="Black"></Grid>
+                            </Grid>
+                        </DockPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem>
+                    
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>
