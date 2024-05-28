@@ -11,8 +11,8 @@ namespace VKR.Models.Oven
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime EndTime { get; set; }
-        public DateTime StartTime { get; set; }
-        = DateTime.Now;
         public int Temperature { get; set; }
+       // public TimeSpan RemainingTime { get; set; }  
     }
+
 }

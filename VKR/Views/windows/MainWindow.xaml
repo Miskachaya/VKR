@@ -17,7 +17,9 @@
                 <MenuItem Header="Файл">
                     <MenuItem Header="Выход" Command = "{Binding CloseApplicationCommand}" ></MenuItem>
                 </MenuItem>
-                <MenuItem Header="График"></MenuItem>
+                <MenuItem Header="График">
+
+                </MenuItem>
             </Menu>
             <TabControl DockPanel.Dock="Bottom">
                 <TabItem>
@@ -45,6 +47,7 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
+
                                 </Grid>
                                 <Grid Grid.Row="1" Background="Bisque"></Grid>
                                 <Grid Grid.Row="2" Background="DarkSlateGray"></Grid>
@@ -85,7 +88,7 @@
                     </Grid>
                 </TabItem>
                 <TabItem>
-                    
+                    <TextBlock  Text="{Binding Ovens}"></TextBlock>
                 </TabItem>
             </TabControl>
         </DockPanel>

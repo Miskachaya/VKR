@@ -1,17 +1,20 @@
 ﻿ using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using VKR.Infrastructure.Commands;
+using VKR.Models.Oven;
 using VKR.ViewModels.Base;
 
 namespace VKR.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
+        public ObservableCollection<Oven> Ovens { get; }
         #region Заголовок окна
         private string _Title="VKR";
         public string Title
@@ -23,7 +26,6 @@ namespace VKR.ViewModels
             }
         }
         #endregion
-
         #region Команды
 
         #region CloseApplicationCommand
@@ -45,6 +47,19 @@ namespace VKR.ViewModels
             #region Команды
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecuted);
             #endregion
+
+            Ovens = new ObservableCollection<Oven>();
+            for(int i=1 ; i<=10; i++)
+            {
+                Oven o = new Oven
+                {
+                    Id = i,
+                    Name = $"Name {i}",
+                    EndTime = DateTime.Now.AddMinutes(i),
+                    Temperature = i * 100
+                };
+                Ovens.Add(o);
+            }
         }
     }
 }
