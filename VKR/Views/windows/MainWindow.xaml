@@ -47,7 +47,6 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-
                                 </Grid>
                                 <Grid Grid.Row="1" Background="Bisque"></Grid>
                                 <Grid Grid.Row="2" Background="DarkSlateGray"></Grid>
@@ -73,7 +72,27 @@
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Grid Grid.Row="0" Background="AliceBlue"></Grid>
+                                <Grid Grid.Row="0" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Ovens[0].Name}"></TextBlock>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=Ovens[0].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" Text="{Binding Ovens[0].EndTime}"/>
+                                </Grid>
+                                <Grid Grid.Row="1" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Ovens[0].Name}"></TextBlock>
+                                    <TextBlock Grid.Column="1" Text="{Binding Path=Ovens[0].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" Text="{Binding Ovens[0].EndTime}"/>
+                                </Grid>
+                                <Grid Grid.Row="1" Background="Black"/>
                                 <Grid Grid.Row="1" Background="Azure"></Grid>
                                 <Grid Grid.Row="2" Background="AntiqueWhite"></Grid>
                                 <Grid Grid.Row="3" Background="Aqua"></Grid>
@@ -88,9 +107,10 @@
                     </Grid>
                 </TabItem>
                 <TabItem>
-                    <TextBlock  Text="{Binding Ovens}"></TextBlock>
+                    <TextBlock  Text="{Binding Port.PortName}"></TextBlock>
                 </TabItem>
             </TabControl>
         </DockPanel>
+        <Button Command="{Binding StartTask}" Content="{Binding state}" HorizontalAlignment="Left" Margin="182,143,0,0" VerticalAlignment="Top" Height="36" Width="275"/>
     </Grid>
 </Window>
