@@ -21,22 +21,28 @@ namespace VKR.Models.Oven
             }
 
         }
-        private string _Name;
-        private DateTime _EndTime,_StartTime;
-        private bool _State;
-       
-        public bool State 
-        {
-            get;set;
-        } 
+
+        public bool State
+        { get; set; } = false;
         public int Id 
         {
             get; set;
         }
-        public string Name { get; set; }
-        public DateTime EndTime { get; set; }
-        public DateTime StartTime { get; set; } = DateTime.Now;
-        public TimeSpan RemainingTime { get; set; }
+        public string Name {  get; set; }
+
+        private int _remainTime;
+        public int remainTime
+        {
+            get { return _remainTime; }
+            set
+            {
+                if (_remainTime != value)
+                {
+                    _remainTime = value;
+                    OnPropertyChanged("remainTime");
+                }
+            }
+        }
 
         private int _Temperature;
 
@@ -49,6 +55,73 @@ namespace VKR.Models.Oven
                 {
                     _Temperature = value;
                     OnPropertyChanged("Temperature");
+                }
+            }
+        }
+        private int _MaxTemperature;
+        public int MaxTemperature
+        {
+            get { return _MaxTemperature; }
+            set
+            {
+                if (_MaxTemperature != value)
+                {
+                    _MaxTemperature = value;
+                    OnPropertyChanged("MaxTemperature");
+                }
+            }
+        }
+        private string _command;
+        public string command
+        {
+            get { return _command; }
+            set
+            {
+                if (_command != value)
+                {
+                    _command = value;
+                    OnPropertyChanged("command");
+                }
+            }
+        }
+        private bool _state = false;
+        public bool state
+        {
+            get { return _state; }
+            set
+            {
+                if (_state != value)
+                {
+                    _state = value;
+                    OnPropertyChanged("state");
+                }
+            }
+        }
+
+        private string _outOnDisplay;
+        public string outOnDisplay
+        {
+            get { return _outOnDisplay; }
+            set
+            {
+                if (_outOnDisplay != value)
+                {
+                    _outOnDisplay = value;
+                    OnPropertyChanged("outOnDisplay");
+                }
+            }
+        }
+
+        private string _color ;
+        public string color
+        {
+            get { return _color; }
+            set
+            {
+                if (_color != value)
+                {
+                    _color = value;
+                    OnPropertyChanged("color");
                 }
             }
         }

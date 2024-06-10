@@ -8,6 +8,7 @@
         mc:Ignorable="d"
         Title="{ Binding Title}"
         Height="450" Width="800">
+        
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
@@ -28,9 +29,11 @@
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <DockPanel Grid.Column="1" Background="Brown">
+                        <DockPanel Grid.Column="0" Background="Brown">
                             <Grid>
                                 <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
@@ -41,28 +44,179 @@
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <Grid Grid.Row="0" Background="Black">
+                                
+                                <Grid Grid.Row="0" Background="AliceBlue">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                               Background="{Binding Ovens[0].color}" 
+                                               Text="{Binding Ovens[0].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                               Text="{Binding Path=Ovens[0].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                               Text="{Binding Path=Ovens[0].outOnDisplay}"/>
                                 </Grid>
-                                <Grid Grid.Row="1" Background="Bisque"></Grid>
-                                <Grid Grid.Row="2" Background="DarkSlateGray"></Grid>
-                                <Grid Grid.Row="3" Background="Beige"></Grid>
-                                <Grid Grid.Row="4" Background="Aqua"></Grid>
-                                <Grid Grid.Row="5" Background="Azure"></Grid>
-                                <Grid Grid.Row="6" Background="Aquamarine"></Grid>
-                                <Grid Grid.Row="7" Background="AntiqueWhite"></Grid>
-                                <Grid Grid.Row="8" Background="DarkCyan"></Grid>
-                                <Grid Grid.Row="9" Background="AliceBlue"></Grid>
+
+                                <Grid Grid.Row="1" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[2].color}" 
+                                        Text="{Binding Ovens[2].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[2].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[2].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="2" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[4].color}" 
+                                        Text="{Binding Ovens[4].Id}"></TextBlock>       
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[4].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[4].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="3" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[6].color}" 
+                                        Text="{Binding Ovens[6].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[6].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[6].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="4" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[8].color}" 
+                                        Text="{Binding Ovens[8].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[8].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[8].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="5" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[10].color}" 
+                                        Text="{Binding Ovens[10].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[10].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[10].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="6" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[12].color}" 
+                                        Text="{Binding Ovens[12].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[12].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[12].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="7" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[14].color}" 
+                                        Text="{Binding Ovens[14].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[14].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[14].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="8" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[16].color}" 
+                                        Text="{Binding Ovens[16].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[16].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[16].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="9" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[18].color}" 
+                                        Text="{Binding Ovens[18].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[18].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[18].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="10" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <ComboBox x:Name="CB" 
+                                              Grid.Column="0" 
+                                              ItemsSource="{Binding Ovens}" 
+                                              DisplayMemberPath="Name"
+                                              SelectedItem="{Binding selectCB}"></ComboBox>
+                                    <TextBox x:Name="TB" Grid.Column="1" Text="{Binding selectTB}"/>
+                                    <Button Grid.Column="2" Content="Начать" Command="{Binding PostCommand}"></Button>
+                                </Grid>
+
                             </Grid>
                         </DockPanel>
-                        <DockPanel Grid.Column="0" Background="Honeydew">
+                        <DockPanel Grid.Column="1" Background="Honeydew">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition ></RowDefinition>
+                                    <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
@@ -78,30 +232,150 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="{Binding Ovens[0].Name}"></TextBlock>
-                                    <TextBlock Grid.Column="1" Text="{Binding Path=Ovens[0].Temperature}"></TextBlock>
-                                    <TextBlock Grid.Column="2" Text="{Binding Ovens[0].EndTime}"/>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[1].color}" 
+                                        Text="{Binding Ovens[1].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[1].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[1].outOnDisplay}"/>
                                 </Grid>
+
                                 <Grid Grid.Row="1" Background="AliceBlue">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="{Binding Ovens[0].Name}"></TextBlock>
-                                    <TextBlock Grid.Column="1" Text="{Binding Path=Ovens[0].Temperature}"></TextBlock>
-                                    <TextBlock Grid.Column="2" Text="{Binding Ovens[0].EndTime}"/>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[3].color}" 
+                                        Text="{Binding Ovens[3].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[3].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[3].outOnDisplay}"/>
                                 </Grid>
-                                <Grid Grid.Row="1" Background="Black"/>
-                                <Grid Grid.Row="1" Background="Azure"></Grid>
-                                <Grid Grid.Row="2" Background="AntiqueWhite"></Grid>
-                                <Grid Grid.Row="3" Background="Aqua"></Grid>
-                                <Grid Grid.Row="4" Background="Aquamarine"></Grid>
-                                <Grid Grid.Row="5" Background="Azure"></Grid>
-                                <Grid Grid.Row="6" Background="Beige"></Grid>
-                                <Grid Grid.Row="7" Background="Bisque"></Grid>
-                                <Grid Grid.Row="8" Background="Bisque"></Grid>
-                                <Grid Grid.Row="9" Background="Black"></Grid>
+
+                                <Grid Grid.Row="2" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[5].color}" 
+                                        Text="{Binding Ovens[5].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[5].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[5].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="3" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[7].color}" 
+                                        Text="{Binding Ovens[7].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[7].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[7].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="4" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[9].color}" 
+                                        Text="{Binding Ovens[9].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[9].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[9].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="5" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[11].color}" 
+                                        Text="{Binding Ovens[11].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[11].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[11].outOnDisplay}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="6" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[13].color}" 
+                                        Text="{Binding Ovens[13].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[13].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[13].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="7" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[15].color}" 
+                                        Text="{Binding Ovens[15].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1"  
+                                        Text="{Binding Path=Ovens[15].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[15].outOnDisplay}"/> 
+                                </Grid>
+
+                                <Grid Grid.Row="8" Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[17].color}" 
+                                        Text="{Binding Ovens[17].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[17].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[17].outOnDisplay}"/>
+                                </Grid>
+
+                                <Grid Grid.Row="9"  Background="AliceBlue">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" 
+                                        Background="{Binding Ovens[19].color}" 
+                                        Text="{Binding Ovens[19].Id}"></TextBlock>
+                                    <TextBlock Grid.Column="1" 
+                                        Text="{Binding Path=Ovens[19].Temperature}"></TextBlock>
+                                    <TextBlock Grid.Column="2" 
+                                        Text="{Binding Path=Ovens[19].outOnDisplay}"/>
+                                </Grid>
+
                             </Grid>
                         </DockPanel>
                     </Grid>
@@ -111,6 +385,5 @@
                 </TabItem>
             </TabControl>
         </DockPanel>
-        <Button Command="{Binding StartTask}" Content="{Binding state}" HorizontalAlignment="Left" Margin="182,143,0,0" VerticalAlignment="Top" Height="36" Width="275"/>
     </Grid>
 </Window>
