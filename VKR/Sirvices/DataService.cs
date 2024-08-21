@@ -35,7 +35,7 @@ namespace VKR.Sirvices
                     {
                         
                         setInformation(serialPort, O[i]);
-                        await Task.Delay(20);
+                        await Task.Delay(18);
                         string s = getInformation(serialPort);
                         serialPort.DiscardInBuffer();
                         if (s == "ошибка") { O[i].color = "Gray"; }
@@ -67,13 +67,14 @@ namespace VKR.Sirvices
                                 
                                 break;
                         }
+                        
 
                     }
                     else
                     {
                         O[i].color = "#FFFFFF00";
                         O[i].outOnDisplay = "";
-                        await Task.Delay(20);
+                        //await Task.Delay(20);
                     }
                 }
                 //для появления всех данных раз в секнду

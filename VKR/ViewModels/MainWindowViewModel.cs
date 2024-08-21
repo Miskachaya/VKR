@@ -94,7 +94,7 @@ namespace VKR.ViewModels
             {
                 Ovens[0].command = "!0100000030";
                 Console.WriteLine(Ovens[0].command);
-                Task.Delay(1050).Wait();
+                //Task.Delay(1050).Wait();
                 Ovens[0].command = "#01";
             });
         }
@@ -116,12 +116,10 @@ namespace VKR.ViewModels
             int timeI = (int.Parse(h) * 3600) + (int.Parse(m) * 60) + (int.Parse(s));
             selectCB.state = true;
             selectCB.remainTime = timeI;
-            Console.WriteLine(time);
-            Console.WriteLine(timeI);
             Task.Run(() =>
             {
                 selectCB.command = $"!{selectCB.Id.ToString("00")}{selectCB.MaxTemperature.ToString("000")}{timeI.ToString("00000")}";
-                Task.Delay(840).Wait();
+                //Task.Delay(840).Wait();
             });
         }
         private bool CanPostCommand(object b) => true;
@@ -156,7 +154,7 @@ namespace VKR.ViewModels
                 {
                     Ovens[i].command = $"?{o[i].Id.ToString("00")}";
                     
-                    Task.Delay(840).Wait();
+                    //FTask.Delay(840).Wait();
 
                     Ovens[i].command = $"#{o[i].Id.ToString("00")}";
                     //try
@@ -181,7 +179,7 @@ namespace VKR.ViewModels
                 "COM4",
                 9600
                 );
-            Port.ReadTimeout =21;
+            Port.ReadTimeout =1;
             Port.Open();
             #region Команды
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecuted);
